@@ -17,7 +17,7 @@ export function ProviderTheme(props:any) {
     const [theme,setTheme] = useState<"dark" | "light">("dark")
     useEffect(() => {
         const htmlElement = document.querySelector('html');
-        htmlElement.classList.toggle('dark');
+        htmlElement?.classList.toggle('dark');
     },[theme])
     return (
         <ContextTheme.Provider value={{theme,setTheme,}}>
